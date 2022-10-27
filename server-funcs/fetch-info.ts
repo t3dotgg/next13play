@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 export const getInfo = async (name: string) => {
   try {
     console.log("do we even get this far?");

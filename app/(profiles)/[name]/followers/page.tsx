@@ -8,7 +8,7 @@ export default async function Home({ params }: { params: { name: string } }) {
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          {pokeProfile.name} has {pokeProfile.moves.length} moves
+          {pokeProfile?.name} has {pokeProfile?.moves.length} moves
         </h1>
       </main>
     </div>
