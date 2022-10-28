@@ -2,7 +2,8 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    enableUndici: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

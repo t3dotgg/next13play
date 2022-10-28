@@ -1,25 +1,11 @@
 export const getInfo = async (name: string) => {
-  try {
-    console.log("do we even get this far?");
-    const fresh = await fetch("https://pokeapi.co/api/v2/pokemon/" + name, {
+  return (await (
+    await fetch("https://pokeapi.co/api/v2/pokemon/" + name, {
       headers: {
         "Content-Type": "application/json",
       },
-    });
-
-    console.log("did we get a response at all?");
-
-    const res = await fresh.text();
-    console.log("did we parse text okay?", res);
-
-    const response = await JSON.parse(res);
-
-    console.log("did we get a response?", response);
-
-    return { name: response.name, moves: response.moves };
-  } catch (e) {
-    console.log("failed to fetch", e);
-  }
+    })
+  ).json()) as Root;
 };
 
 export interface Root {

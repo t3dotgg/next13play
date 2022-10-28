@@ -7,7 +7,7 @@ export default async function AnotherLayout({
   children: React.ReactNode;
   params: { name: string };
 }) {
-  const pokeProfile = await getInfo("bulbasaur");
+  const pokeProfile = await getInfo(params.name);
 
   return (
     <html lang="en">
