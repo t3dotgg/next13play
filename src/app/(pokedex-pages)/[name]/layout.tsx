@@ -1,4 +1,4 @@
-import { getPokemonByName } from "@/server-funcs/fetch-info";
+import { getPokemonByName } from "@/server/fetch-info";
 
 export default async function AnotherLayout({
   children,
