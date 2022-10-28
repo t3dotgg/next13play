@@ -1,8 +1,8 @@
-import { getInfo } from "../../../../server-funcs/fetch-info";
+import { getPokemonByName } from "../../../../server-funcs/fetch-info";
 import styles from "../../page.module.css";
 
 export default async function Home({ params }: { params: { name: string } }) {
-  const pokeProfile = await getInfo(params.name);
+  const pokeProfile = await getPokemonByName(params.name);
 
   return (
     <div className={styles.container}>

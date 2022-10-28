@@ -1,7 +1,7 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
-import { getInfo } from "../../server-funcs/fetch-info";
+import { getPokemonByName } from "../../server-funcs/fetch-info";
 
 export default function Home() {
   // const [data, setData] = useState(null);
@@ -11,7 +11,7 @@ export default function Home() {
   //     setData(data);
   //   });
   // }, []);
-  const data = use(getInfo("pikachu"));
+  const data = use(getPokemonByName("pikachu"));
 
   console.log(data);
 

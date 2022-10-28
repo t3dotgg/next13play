@@ -1,10 +1,12 @@
-export const getInfo = async (name: string) => {
+export const getPokemonByName = async (name: string) => {
   return (await (
-    await fetch("https://pokeapi.co/api/v2/pokemon/" + name, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    await fetch("https://pokeapi.co/api/v2/pokemon/" + name)
+  ).json()) as Root;
+};
+
+export const getPokemonById = async (id: number) => {
+  return (await (
+    await fetch("https://pokeapi.co/api/v2/pokemon/" + id)
   ).json()) as Root;
 };
 
